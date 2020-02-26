@@ -1,0 +1,100 @@
+<html>
+
+<head>
+  <title>Cinema HT</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/modelo/Salas.js"></script>
+
+</head>
+
+<body onload="salas.carregarSalas()">
+
+  <nav id="menu">
+
+    <div>
+
+      <h1>Cinema High Tech</h1>
+
+
+      <div>
+
+        <ul>
+
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+
+          <a href="usuarios.html">
+            <li>Usuários</li>
+          </a>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main id="main" class="main">
+    
+    <div id="tituloPrincipal" class="tituloPrincipal">
+      <h3 id="h3Principal" class="h3Principal">Gerência de Salas</h3>
+    </div>
+
+    <form>
+      <div id="card">
+
+        <h2>Nova sala</h2>
+
+        <div>
+          <label for="inputNome">Nome da sala</label>
+          <input type="text" name="" id="inputNome" placeholder="Nome da sala">
+        </div>
+
+        <div>
+          <button class="buttomSalvar" type="button" onclick="salas.salvar()">Salvar</button>
+          <button class="buttomCancelar" type="button" onclick="salas.cancelar()">Cancelar</button>
+        </div>
+
+      <div id="tituloTabela">
+        <h2>Salas Cadastradas</h2>
+      </div>
+
+      <table id="table">
+
+        <thead>
+          <th>Sala</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tabela"></tbody>
+
+      </table>
+
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

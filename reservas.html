@@ -1,0 +1,198 @@
+<html>
+
+<head>
+  <title>Cinema HT</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/modelo/Reservas.js"></script>
+
+</head>
+
+<body onload="reservas.carregarLocalStorage()">
+
+  <nav id="menu">
+
+    <div>
+
+      <h1>Cinema High Tech</h1>
+
+
+      <div>
+
+        <ul>
+
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+
+          <a href="usuarios.html">
+            <li>Usuários</li>
+          </a>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main id="main" class="main">
+    
+    <div id="tituloPrincipal" class="tituloPrincipal">
+      <h3 id="h3Principal" class="h3Principal">Gerência de Reservas</h3>
+    </div>
+
+    <form>
+      <div id="card">
+
+        <h2>Nova reversa</h2>
+
+        <div>
+          <label for="selectSessao">Sessão</label>
+          <select name="selectSessao" id="selectSessao">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="selectCliente">Cliente</label>
+          <select name="selectCliente" id="selectCliente">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Escolha a cadeira</legend>
+          <div class="todasCadeiras">
+            <div>
+              <label for="">A</label>
+              <button value="false" id="a1" class="cadeirasA" >1</button>
+              <button value="false" id="a2" class="cadeirasA" >2</button>
+              <button value="false" id="a3" class="cadeirasA" >3</button>
+              <button value="false" id="a4" class="cadeirasA" >4</button>
+              <button value="false" id="a5" class="cadeirasA" >5</button>
+              <button value="false" id="a6" class="cadeirasA" >6</button>
+              <button value="false" id="a7" class="cadeirasA" >7</button>
+              <button value="false" id="a8" class="cadeirasA" >8</button>
+              <button value="false" id="a9" class="cadeirasA" >9</button>
+              <button value="false" id="a10" class="cadeirasA" >10</button>
+            </div>
+            <div>
+              <label for="">B</label>
+              <button value="false" id="b1" class="cadeirasB" >1</button>
+              <button value="false" id="b2" class="cadeirasB" >2</button>
+              <button value="false" id="b3" class="cadeirasB" >3</button>
+              <button value="false" id="b4" class="cadeirasB" >4</button>
+              <button value="false" id="b5" class="cadeirasB" >5</button>
+              <button value="false" id="b6" class="cadeirasB" >6</button>
+              <button value="false" id="b7" class="cadeirasB" >7</button>
+              <button value="false" id="b8" class="cadeirasB" >8</button>
+              <button value="false" id="b9" class="cadeirasB" >9</button>
+              <button value="false" id="b10" class="cadeirasB" >10</button>
+            </div>
+            <div>
+              <label for="">C</label>
+              <button class="cadeirasC" >1</button>
+              <button class="cadeirasC" >2</button>
+              <button class="cadeirasC" >3</button>
+              <button class="cadeirasC" >4</button>
+              <button class="cadeirasC" >5</button>
+              <button class="cadeirasC" >6</button>
+              <button class="cadeirasC" >7</button>
+              <button class="cadeirasC" >8</button>
+              <button class="cadeirasC" >9</button>
+              <button class="cadeirasC" >10</button>
+            </div>
+            <div>
+              <label for="">D</label>
+              <button class="cadeirasD" >1</button>
+              <button class="cadeirasD" >2</button>
+              <button class="cadeirasD" >3</button>
+              <button class="cadeirasD" >4</button>
+              <button class="cadeirasD" >5</button>
+              <button class="cadeirasD" >6</button>
+              <button class="cadeirasD" >7</button>
+              <button class="cadeirasD" >8</button>
+              <button class="cadeirasD" >9</button>
+              <button class="cadeirasD" >10</button>
+            </div>
+            <div>
+              <label for="">E</label>
+              <button class="cadeirasE" >1</button>
+              <button class="cadeirasE" >2</button>
+              <button class="cadeirasE" >3</button>
+              <button class="cadeirasE" >4</button>
+              <button class="cadeirasE" >5</button>
+              <button class="cadeirasE" >6</button>
+              <button class="cadeirasE" >7</button>
+              <button class="cadeirasE" >8</button>
+              <button class="cadeirasE" >9</button>
+              <button class="cadeirasE" >10</button>
+            </div>
+            <div>
+              <label for="">F</label>
+              <button class="cadeirasF" >1</button>
+              <button class="cadeirasF" >2</button>
+              <button class="cadeirasF" >3</button>
+              <button class="cadeirasF" >4</button>
+              <button class="cadeirasF" >5</button>
+              <button class="cadeirasF" >6</button>
+              <button class="cadeirasF" >7</button>
+              <button class="cadeirasF" >8</button>
+              <button class="cadeirasF" >9</button>
+              <button class="cadeirasF" >10</button>
+            </div>
+          </div>
+        </fieldset>
+
+        <div>
+          <button class="buttomSalvar" type="button" onclick="sessoes.salvar()">Salvar</button>
+          <button class="buttomCancelar" type="button" onclick="sessoes.cancelar()">Cancelar</button>
+        </div>
+
+      <div id="tituloTabela">
+        <h2>Reservas Cadastradas</h2>
+      </div>
+
+      <table id="table">
+
+        <thead>
+          <th>Filme</th>
+          <th>Data</th>
+          <th>Início</th>
+          <th>Dublado/Legendado</th>
+          <th>Sala</th>
+          <th>3D/2D</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tabela"></tbody>
+
+      </table>
+
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

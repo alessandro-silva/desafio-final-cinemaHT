@@ -1,0 +1,139 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cinema High Tech</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: lightgray;
+
+    }
+
+    #logincard {
+      width: 40%;
+      margin: 200px auto;
+      text-align: center;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0px 0px 10px gray;
+      border-radius: 5px;
+    }
+
+    .entrada {
+      width: 90%;
+      padding: 10px;
+      border: none;
+      border-bottom: black 1px solid;
+      font-weight: 900;
+      color: rgb(41, 41, 73);
+    }
+
+    .botao {
+      width: 90%;
+      padding: 10px;
+      background-color: rgb(41, 41, 73);
+      color: white;
+      border: none;
+      font-weight: 900;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    div a {
+      color: rgb(41, 41, 73);
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    div h1 {
+      color: rgb(41, 41, 73);
+      font-weight: 900;
+    }
+
+    div {
+      margin: 15px 0px;
+    }
+  </style>
+</head>
+
+<body onload="login.carregarLogin()">
+  <div id="logincard">
+    <div>
+      <!-- <h1>Log-in</h1> -->
+      <img class="fabrica" src="img/fabrica.jpeg" alt="">
+    </div>
+
+    <div>
+      <input type="email" name="" id="userEmail" placeholder="Email" class="entrada">
+    </div>
+
+    <div>
+      <input id="userPassword" type="password" placeholder="Senha" class="entrada">
+    </div>
+
+    <div>
+      <button class="botao" onclick="login.verificarLogin()">login</button>
+    </div>
+
+    <div>
+      <a href="register.html">Cadastrar</a>
+    </div>
+
+  </div>
+
+  <script>
+    class Login {
+      constructor() {
+        this.usuarios = {}
+        this.gerarId = 0
+      }
+
+      carregarLogin() {
+        if (localStorage.getItem('usuarios') != null) {
+          this.usuarios = JSON.parse(localStorage.getItem('usuarios'))
+        }
+
+        if (localStorage.getItem('idUsarios') != null) {
+          this.gerarId = JSON.parse(localStorage.getItem('idUsuarios'))
+        }
+      }
+
+      lerDados() {
+        let usuario = {}
+
+        usuario.email = document.querySelector('#userEmail').value
+        usuario.senha = document.querySelector('#userPassword').value
+
+        return usuario
+      }
+
+      verificarLogin() {
+        let usuario = this.lerDados()
+
+        let achou = false
+        let i = 0
+        while (i < this.usuarios.length && !achou) {
+          if (this.usuarios[i].email == usuario.email) {
+            if (this.usuarios[i].senha == usuario.senha) {
+              achou = true
+            }
+          }
+          i++
+        }
+
+        if (achou) {
+          window.location.replace('index.html')
+        }
+
+      }
+
+    }
+    let login = new Login()
+
+  </script>
+
+</body>
+
+</html>

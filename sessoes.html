@@ -1,0 +1,144 @@
+<html>
+
+<head>
+  <title>Cinema HT</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/modelo/Clientes.js"></script>
+  <script src="js/modelo/Filmes.js"></script>
+  <script src="js/modelo/Sessoes.js"></script>
+
+</head>
+
+<body onload="sessoes.carregarSessoes()">
+
+  <nav id="menu">
+
+    <div>
+
+      <h1>Cinema High Tech</h1>
+
+
+      <div>
+
+        <ul>
+
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+
+          <a href="usuarios.html">
+            <li>Usuários</li>
+          </a>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main id="main" class="main">
+    
+    <div id="tituloPrincipal" class="tituloPrincipal">
+      <h3 id="h3Principal" class="h3Principal">Gerência de Sessões</h3>
+    </div>
+
+    <form>
+      <div id="card">
+
+        <h2>Nova sessão</h2>
+
+        <div>
+          <label for="selectFilme">Filme da sessão</label>
+          <select name="selectFilme" id="selectFilme">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="selectSala">Sala da sessão</label>
+          <select name="selectSala" id="selectSala">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="selectDubLeg">Dublado/Legendado</label>
+          <select name="selectDubLeg" id="selectDubLeg">
+            <option value="">Selecione...</option>
+            <option value="Dublado">Dublado</option>
+            <option value="Legendado">Legendado</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="select3D2D">3D/2D</label>
+          <select name="select3D2D" id="select3D2D">
+            <option value="">Selecione...</option>
+            <option value="3D">3D</option>
+            <option value="2D">2D</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="inputData">Data da sessão</label>
+          <input type="datetime" name="" id="inputData" placeholder="Data da sessão">
+        </div>
+
+        <div>
+          <label for="inputHorario">Horário de início</label>
+          <input type="datetime" name="" id="inputHorario" placeholder="Horário de início da sessão">
+        </div>
+
+        <div>
+          <button class="buttomSalvar" type="button" onclick="sessoes.salvar()">Salvar</button>
+          <button class="buttomCancelar" type="button" onclick="sessoes.cancelar()">Cancelar</button>
+        </div>
+
+      <div id="tituloTabela">
+        <h2>Sessões Cadastrados</h2>
+      </div>
+
+      <table id="table">
+
+        <thead>
+          <th>Filme</th>
+          <th>Data</th>
+          <th>Início</th>
+          <th>Dublado/Legendado</th>
+          <th>Sala</th>
+          <th>3D/2D</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tabela"></tbody>
+
+      </table>
+
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <title>Cinema HT</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/modelo/Clientes.js"></script>
+  <script src="js/modelo/Filmes.js"></script>
+  <script src="js/modelo/Usuarios.js"></script>
+
+</head>
+
+<body onload="usuario.carregarUsuarios()">
+
+  <nav id="menu">
+
+    <div>
+
+      <h1>Cinema High Tech</h1>
+
+
+      <div>
+
+        <ul>
+
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+
+          <a href="usuarios.html">
+            <li>Usuários</li>
+          </a>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main id="main" class="main">
+    
+    <div id="tituloPrincipal" class="tituloPrincipal">
+      <h3 id="h3Principal" class="h3Principal">Gerência de Usuários</h3>
+    </div>
+
+    <form>
+      <div id="card">
+
+        <h2>Novo Usuário</h2>
+
+        <div>
+          <label for="inputNome">Nome</label>
+          <input type="text" name="" id="inputNome" placeholder="Nome">
+        </div>
+
+        <div>
+          <label for="inputEmail">Email</label>
+          <input type="email" name="" id="inputEmail" placeholder="Email">
+        </div>
+
+        <div>
+          <label for="inputSenha">Senha</label>
+          <input type="password" name="" id="inputSenha" placeholder="Senha">
+        </div>
+
+        <div>
+          <button type="button" class="buttomSalvar" onclick="usuario.salvar()">Salvar</button>
+          <button type="button" class="buttomCancelar" onclick="usuario.cancelar()">Cancelar</button>
+        </div>
+        
+      <div id="tituloTabela">
+
+      </div>
+
+      <table id="table">
+
+        <thead>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Senha</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tabela"></tbody>
+
+      </table>
+
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <title>Cinema HT</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/modelo/Clientes.js"></script>
+  <script src="js/modelo/Filmes.js"></script>
+  <!-- <script type="module">
+    import gerenciador from 'js/gerenciadorCinema.js'
+    window.gerenciador = gerenciador
+  </script> -->
+
+</head>
+
+<body onload="filmes.carregarFilmes()">
+<!-- <body onload="gerenciador.carregarfilmes()"> -->
+
+  <nav id="menu">
+
+    <div>
+
+      <h1>Cinema High Tech</h1>
+
+      <div>
+
+        <ul>
+
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+
+          <a href="usuarios.html">
+            <li>Usuários</li>
+          </a>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main id="main" class="main">
+    
+    <div id="tituloPrincipal" class="tituloPrincipal">
+      <h3 id="h3Principal" class="h3Principal">Gerência de Filmes</h3>
+    </div> 
+
+    <form>
+      <div id="card">
+
+        <h2>Novo filme</h2>
+
+        <div>
+          <label for="inputNomeFilme">Nome do filme</label>
+          <input type="text" name="" id="inputNomeFilme" placeholder="Nome do filme">
+        </div>
+        
+        <div>
+          <label for="inputDuracao">Duração</label>
+          <input type="number" name="" id="inputDuracao" placeholder="Duração do filme">
+        </div>
+
+        <div>
+          <label for="inputEtaria">Classificação etária</label>
+          <input type="text" name="" id="inputEtaria" placeholder="ex: 14 anos">
+        </div>
+
+        <div>
+          <label for="inputGenero">Gênero</label>
+          <input type="text" name="" id="inputGenero" placeholder="ex: Ação">
+        </div>
+
+        <div>
+          <label for="inputSinopse">Sinopse</label>
+          <input type="text" name="" id="inputSinopse" placeholder="Sinopse do filme">
+        </div>
+
+        <div>
+          <button class="buttomSalvar" type="button" onclick="filmes.salvar()">Salvar</button>
+          <!-- <button class="buttomSalvar" type="button" onclick="gerenciadorCinema.salvar()">Salvar</button> -->
+          <button class="buttomCancelar" type="button" onclick="filmes.cancelar()">Cancelar</button>
+        </div>
+        
+        <div id="tituloTabela">
+          <h2>Filmes Cadastrados</h2>
+        </div>
+
+        <table>
+
+          <thead>
+            <th>Filme</th>
+            <th>Duração</th>
+            <th>Classificação</th>
+            <th>Gênero</th>
+            <th>Sinopse</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody id="tabela"></tbody>
+
+        </table>
+
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>
