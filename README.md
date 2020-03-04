@@ -24,12 +24,15 @@ citadas abaixo;
 Dentro do diretório "modelo" ficarão as classes referentes às entidades do projeto, são elas:
 
 – `GerenciadorCinema`: Classe responsável pela gerência do cinema como um todo;
+
 ```
 Atributos:
 sessoes = [ ] - Array de objetos do tipo Sessao
+
 ```
 
 – `Cliente`: Classe responsável por representar cada cliente do cinema;
+
 ```
 Atributos:
 nome
@@ -38,6 +41,7 @@ email
 ```
 
 – `Sala`: Classe responsável por representar uma sala do cinema;
+
 ```
 Atributos:
 identificador
@@ -53,6 +57,7 @@ F[ ]
 ```
 
 – `Sessao`: Classe responsável por representar cada sessão do cinema;
+
 ```
 Atributos:
 data - Data da sessão em questão
@@ -62,7 +67,8 @@ tresD - Flag para saber se o filme é 3D ou não
 sala = {} - Objeto Sala a qual essa sessão será executada
 ```
 
-– `Filme`: Classe responsável por representar o filme;
+– `Filme`:Classe responsável por representar o filme;
+
 ```
 Atributos:
 titulo - Título do filme
@@ -71,6 +77,7 @@ duracao - Duração do filme
 ```
 
 – `Cadeira`: Objeto responsável por representar uma cadeira do cinema;
+
 ```
 Atributos:
 ocupado – true = reservado, false = livre (default)
@@ -78,8 +85,8 @@ ocupado – true = reservado, false = livre (default)
 
 ### CRUD’s
 
-Todos os CRUDs do sistema deverão aplicar todas as funções básicas (Cadastro, Listagem, Edição e
-Exclusão)
+Todos os CRUDs do sistema deverão aplicar todas as funções básicas (Cadastro, Listagem, Edição e Exclusão)
+
 ```
 1 - Clientes
 2 - Salas
@@ -90,18 +97,12 @@ Exclusão)
 
 ### Funções do Sistema
 
-- `Alocar Cliente`
-Essa função deve permitir que o operador do sistema, aloque um cliente em uma cadeira específica
-de uma determinada sessão. Uma vez alocado, esta cadeira em questão fica reservada e não pode ser atribuída
-novamente
-– `Consultar disponibilidade`
-Essa função deverá exibir quais dos assentos da sessão estarão disponíveis.
+- `Alocar Cliente` Essa função deve permitir que o operador do sistema, aloque um cliente em uma cadeira específica de uma determinada sessão. Uma vez alocado, esta cadeira em questão fica reservada e não pode ser atribuída novamente
+
+– `Consultar disponibilidade` Essa função deverá exibir quais dos assentos da sessão estarão disponíveis.
 
 ### Login e Logout
 
-- `Login`
-Deverá ser criada uma página de login onde o usuário deverá ser autenticado no sistema. [Utilizar
-LocalStorage].
-- `Logout`
-Ao clicar no botão de logout, o usuário deverá ser redirecionado à tela de login e precisará se logar
-novamente para utilizar o sistema.
+- `Login` Deverá ser criada uma página de login onde o usuário deverá ser autenticado no sistema. [Utilizar LocalStorage .
+
+- `Logout` Ao clicar no botão de logout, o usuário deverá ser redirecionado à tela de login e precisará se logar novamente para utilizar o sistema.
