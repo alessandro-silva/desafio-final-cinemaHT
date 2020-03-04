@@ -24,14 +24,18 @@ citadas abaixo;
 Dentro do diretório "modelo" ficarão as classes referentes às entidades do projeto, são elas:
 
 – GerenciadorCinema: Classe responsável pela gerência do cinema como um todo
-`Atributos:
-sessoes = [ ] - Array de objetos do tipo Sessao`
+```
+Atributos:
+sessoes = [ ] - Array de objetos do tipo Sessao
+```
 
 – Cliente: Classe responsável por representar cada cliente do cinema
-`Atributos:
+```
+Atributos:
 nome
 idade
-email`
+email
+```
 
 – Sala: Classe responsável por representar uma sala do cinema
 ```
@@ -49,33 +53,43 @@ F[ ]
 ```
 
 – Sessao: Classe responsável por representar cada sessão do cinema
-`Atributos:
+```
+Atributos:
 data - Data da sessão em questão
 horarioInicio - Horario de início da sessão
 legendado - Flag para saber se o filme é legendado ou dublado
 tresD - Flag para saber se o filme é 3D ou não
-sala = {} - Objeto Sala a qual essa sessão será executada`
+sala = {} - Objeto Sala a qual essa sessão será executada
+```
 
 – Filme: Classe responsável por representar o filme
-`Atributos:
+```
+Atributos:
 titulo - Título do filme
 classificacao - Classificação indicativa
-duracao - Duração do filme`
+duracao - Duração do filme
+```
 
 – Cadeira: Objeto responsável por representar uma cadeira do cinema
-`Atributos:
-ocupado – true = reservado, false = livre (default)`
+```
+Atributos:
+ocupado – true = reservado, false = livre (default)
+```
 
-– CRUD’s
+### CRUD’s
+
 Todos os CRUDs do sistema deverão aplicar todas as funções básicas (Cadastro, Listagem, Edição e
 Exclusão)
-`1 - Clientes
+```
+1 - Clientes
 2 - Salas
 3 - Sessões
 4 - Filmes
-5 - Usuário`
+5 - Usuário
+```
 
-- Funções do Sistema
+### Funções do Sistema
+
 1 - Alocar Cliente
 Essa função deve permitir que o operador do sistema, aloque um cliente em uma cadeira específica
 de uma determinada sessão. Uma vez alocado, esta cadeira em questão fica reservada e não pode ser atribuída
@@ -83,7 +97,8 @@ novamente
 2 – Consultar disponibilidade
 Essa função deverá exibir quais dos assentos da sessão estarão disponíveis.
 
-- Login e Logout
+### Login e Logout
+
 1 - Login
 Deverá ser criada uma página de login onde o usuário deverá ser autenticado no sistema. [Utilizar
 LocalStorage].
