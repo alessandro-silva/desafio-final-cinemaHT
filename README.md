@@ -23,13 +23,13 @@ citadas abaixo;
 
 Dentro do diretório "modelo" ficarão as classes referentes às entidades do projeto, são elas:
 
-– GerenciadorCinema: Classe responsável pela gerência do cinema como um todo
+– `GerenciadorCinema`: Classe responsável pela gerência do cinema como um todo;
 ```
 Atributos:
 sessoes = [ ] - Array de objetos do tipo Sessao
 ```
 
-– Cliente: Classe responsável por representar cada cliente do cinema
+– `Cliente`: Classe responsável por representar cada cliente do cinema;
 ```
 Atributos:
 nome
@@ -37,7 +37,7 @@ idade
 email
 ```
 
-– Sala: Classe responsável por representar uma sala do cinema
+– `Sala`: Classe responsável por representar uma sala do cinema;
 ```
 Atributos:
 identificador
@@ -52,7 +52,7 @@ E[ ]
 F[ ]
 ```
 
-– Sessao: Classe responsável por representar cada sessão do cinema
+– `Sessao`: Classe responsável por representar cada sessão do cinema;
 ```
 Atributos:
 data - Data da sessão em questão
@@ -62,7 +62,7 @@ tresD - Flag para saber se o filme é 3D ou não
 sala = {} - Objeto Sala a qual essa sessão será executada
 ```
 
-– Filme: Classe responsável por representar o filme
+– `Filme`: Classe responsável por representar o filme;
 ```
 Atributos:
 titulo - Título do filme
@@ -70,7 +70,7 @@ classificacao - Classificação indicativa
 duracao - Duração do filme
 ```
 
-– Cadeira: Objeto responsável por representar uma cadeira do cinema
+– `Cadeira`: Objeto responsável por representar uma cadeira do cinema;
 ```
 Atributos:
 ocupado – true = reservado, false = livre (default)
@@ -90,18 +90,18 @@ Exclusão)
 
 ### Funções do Sistema
 
-1 - Alocar Cliente
+- `Alocar Cliente`
 Essa função deve permitir que o operador do sistema, aloque um cliente em uma cadeira específica
 de uma determinada sessão. Uma vez alocado, esta cadeira em questão fica reservada e não pode ser atribuída
 novamente
-2 – Consultar disponibilidade
+– `Consultar disponibilidade`
 Essa função deverá exibir quais dos assentos da sessão estarão disponíveis.
 
 ### Login e Logout
 
-1 - Login
+- `Login`
 Deverá ser criada uma página de login onde o usuário deverá ser autenticado no sistema. [Utilizar
 LocalStorage].
-2 - Logout
+- `Logout`
 Ao clicar no botão de logout, o usuário deverá ser redirecionado à tela de login e precisará se logar
 novamente para utilizar o sistema.
