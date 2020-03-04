@@ -14,6 +14,7 @@ Este projeto consiste em criar um sistema de gerenciamento de um cinema hipotét
 
 - `[css] - Diretório contendo todos os arquivos de estilo do projeto;`
 - `[js] - Diretório contendo todos os arquivos JS;`
+
  `-> [modelo] - Diretório contendo todas as entidades do projeto (arquivos .js) Ps. As entidades serão citadas abaixo;`
 - `[img] - Diretório contendo todas as imagens do projeto`
 - `[/] - Arquivos .html`
