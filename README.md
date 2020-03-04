@@ -66,7 +66,7 @@ tresD - Flag para saber se o filme é 3D ou não
 sala = {} - Objeto Sala a qual essa sessão será executada
 ```
 
-- `Filme`:Classe responsável por representar o filme;
+- `Filme`: Classe responsável por representar o filme;
 
 ```
 Atributos:
